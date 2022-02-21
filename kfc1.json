@@ -1,0 +1,89 @@
+{
+  "Table": [
+    {
+      "rowcount": 175
+    }
+  ],
+  "Table1": [
+    {
+      "rownum": 1,
+      "storeName": "高桥",
+      "addressDetail": "东二环一段高桥大市场西578号",
+      "pro": "Wi-Fi,点唱机,礼品卡,生日餐会",
+      "provinceName": "湖南省",
+      "cityName": "长沙市"
+    },
+    {
+      "rownum": 2,
+      "storeName": "蝴蝶",
+      "addressDetail": "五一西路78号",
+      "pro": "24小时,Wi-Fi,点唱机,店内参观,礼品卡",
+      "provinceName": "湖南省",
+      "cityName": "长沙市"
+    },
+    {
+      "rownum": 3,
+      "storeName": "银盆路",
+      "addressDetail": "湖南银双路奥克斯广场一楼餐厅",
+      "pro": "Wi-Fi,点唱机,礼品卡,生日餐会",
+      "provinceName": "湖南省",
+      "cityName": "长沙市"
+    },
+    {
+      "rownum": 4,
+      "storeName": "阿波罗广场",
+      "addressDetail": "八一路1号",
+      "pro": "Wi-Fi,点唱机,店内参观,礼品卡",
+      "provinceName": "湖南省",
+      "cityName": "长沙市"
+    },
+    {
+      "rownum": 5,
+      "storeName": "中央广场",
+      "addressDetail": "芙蓉中路238号芙蓉广场首层",
+      "pro": "Wi-Fi,点唱机,店内参观,礼品卡,生日餐会",
+      "provinceName": "湖南省",
+      "cityName": "长沙市"
+    },
+    {
+      "rownum": 6,
+      "storeName": "解放西路",
+      "addressDetail": "天心区黄兴南路445号",
+      "pro": "24小时,Wi-Fi,点唱机,礼品卡,生日餐会",
+      "provinceName": "湖南省",
+      "cityName": "长沙市"
+    },
+    {
+      "rownum": 7,
+      "storeName": "星沙",
+      "addressDetail": "星沙镇长沙通程商业广场",
+      "pro": "Wi-Fi,点唱机,店内参观,礼品卡",
+      "provinceName": "湖南省",
+      "cityName": "长沙市"
+    },
+    {
+      "rownum": 8,
+      "storeName": "桐梓坡",
+      "addressDetail": "湖南桐梓坡路星电光城一层",
+      "pro": "Wi-Fi,点唱机,店内参观,礼品卡,生日餐会",
+      "provinceName": "湖南省",
+      "cityName": "长沙市"
+    },
+    {
+      "rownum": 9,
+      "storeName": "黄兴中路",
+      "addressDetail": "黄兴中路王府井百货一楼",
+      "pro": "Wi-Fi,礼品卡",
+      "provinceName": "湖南省",
+      "cityName": "长沙市"
+    },
+    {
+      "rownum": 10,
+      "storeName": "林院",
+      "addressDetail": "文源街道韶山南路496-1号肯德基林院餐厅",
+      "pro": "Wi-Fi,礼品卡,生日餐会",
+      "provinceName": "湖南省",
+      "cityName": "长沙市"
+    }
+  ]
+}
