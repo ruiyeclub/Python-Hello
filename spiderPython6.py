@@ -16,6 +16,5 @@ response = urllib.request.urlopen(request)
 
 content = response.read().decode('utf-8')
 
-# 3.数据下载到本地
 with open('weibo.html', 'w', encoding='utf-8') as fp:
     fp.write(content)
