@@ -1,5 +1,5 @@
 from lxml import etree
-# xpath解析：
+# xpath解析： （快捷键ctrl+shift+x）
 # 1.本地文件        etree.parse
 # 2.服务器响应的数据 etree.HTML()
 
