@@ -59,7 +59,7 @@ soup = BeautifulSoup(open('13.BeautifulSoup使用.html', encoding='utf-8'), 'lxm
 
 
 # 层级选择器
-#  后代选择器
+# 后代选择器
 # 找到的是div下面的li（[<li id="l1">张三</li>, <li id="l2">李四</li>, <li>王五</li>]）
 # print(soup.select('div li'))
 
