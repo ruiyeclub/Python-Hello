@@ -55,7 +55,7 @@ def get_content_by_session(code_url):
         '__VIEWSTATEGENERATOR': view_state_generator,
         'from': 'http://so.gushiwen.cn/user/collect.aspx',
         'email': '15773329913',
-        'pwd': 'action',
+        'pwd': '185048761',
         'code': code_name,
         'denglu': '登录',
     }
