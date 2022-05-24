@@ -20,8 +20,47 @@ from bs4 import BeautifulSoup
 import urllib.request
 
 
-def get_content():
+# 该方法有问题，相当于请求了两次验证码接口，导致需要验证的验证码不是输入的验证码
+def get_content(code_url):
+    # 将图片下载到本地
+    urllib.request.urlretrieve(url=code_url, filename='code.jpg')
+    code_name = input('请输入你的验证码')
+
+    data_post = {
+        '__VIEWSTATE': view_state,
+        '__VIEWSTATEGENERATOR': view_state_generator,
+        'from': 'http://so.gushiwen.cn/user/collect.aspx',
+        'email': '15773329913',
+        'pwd': 'action',
+        'code': code_name,
+        'denglu': '登录',
+    }
+
     response_post = requests.post(url=url, headers=headers, data=data_post)
+    return response_post
+
+
+# requests里面有一个方法session() 通过session的返回值 就能使用请求变成一个对象
+def get_content_by_session(code_url):
+    session = requests.session()
+    # 请求验证码url的session和后面请求接口的session是一个session
+    response_code = session.get(code_url)
+    content_code = response_code.content
+    with open('code.jpg', 'wb')as fp:
+        fp.write(content_code)
+    code_name = input('请输入你的验证码')
+
+    data_post = {
+        '__VIEWSTATE': view_state,
+        '__VIEWSTATEGENERATOR': view_state_generator,
+        'from': 'http://so.gushiwen.cn/user/collect.aspx',
+        'email': '15773329913',
+        'pwd': 'action',
+        'code': code_name,
+        'denglu': '登录',
+    }
+
+    response_post = session.post(url=url, headers=headers, data=data_post)
     return response_post
 
 
@@ -47,32 +86,9 @@ if __name__ == '__main__':
     # 获取验证码
     code = soup.select('#imgCode')[0].get('src')
     code_url = 'https://so.gushiwen.cn' + code
+    # 获取response内容
+    response_post = get_content_by_session(code_url)
 
-    # 将图片下载到本地
-    urllib.request.urlretrieve(url=code_url, filename='code.jpg')
-    code_name = input('请输入你的验证码')
-
-    data_post = {
-        '__VIEWSTATE': view_state,
-        '__VIEWSTATEGENERATOR': view_state_generator,
-        'from': 'http://so.gushiwen.cn/user/collect.aspx',
-        'email': '15773329913',
-        'pwd': 'action',
-        'code': code_name,
-        'denglu': '登录',
-    }
-
-    response_post = get_content()
     content_post = response_post.text
     with open('gushiwen.html', 'w', encoding=' utf-8') as fp:
         fp.write(content_post)
-
-    # requests里面有一个方法session() 通过session的返回值 就能使用请求变成一个对象
-    session = requests.session()
-    response_code = session.get(code_url)
-    content_code = response_code.content
-    with open('code.jpg', 'wb')as fp:
-        fp.write(content_code)
-
-    response_post = session.post(url=url, headers=headers, data=data_post)
-    content_post = response_post.text
