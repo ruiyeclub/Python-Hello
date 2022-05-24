@@ -94,6 +94,7 @@ obj = soup.select('#p1')[0]
 # print(obj.get('class'))
 # print(obj['class'])
 
-
+# <a href="" title="a2" id="f1" value="value京东">京东</a>
+print(soup.select('#f1')[0].get('value'))
 
 
