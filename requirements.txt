@@ -1,0 +1,4 @@
+beautifulsoup4==4.11.1
+jsonpath==0.82
+lxml==4.8.0
+requests==2.27.1
