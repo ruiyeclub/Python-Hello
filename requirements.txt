@@ -3,3 +3,4 @@ jsonpath==0.82
 lxml==4.8.0
 requests==2.27.1
 ddddocr==1.4.3
+scrapy==2.6.1

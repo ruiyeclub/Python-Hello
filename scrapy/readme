@@ -1,0 +1,20 @@
+pip install scrapy
+scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。
+可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。
+
+1.创建爬虫的项目：
+    scrapy startproject 项目名字
+    注意：项目的名字不允许使用数字开头 也不能包含中文
+2.创建爬虫文件：
+    要在spiders文件夹中去创建爬虫文件
+    cd 项目名字\项目名字\spiders
+    cd scrapy_baidu_1\scrapy_baidu_1\spiders
+
+    创建爬虫文件
+    scrapy genspider 爬虫文件名字 要爬取的网页（自动加了http  ）
+    eg: scrapy genspider baidu www.baidu.com
+3.运行爬虫代码
+    scrapy crawl 爬虫的名字
+    eg: scrapy crawl baidu
+    注意: 百度、搜狐、谷歌等，因为协议问题无法爬取，需要注释robots协议（settings.py）。
+    robots协议是一个君子协议，一般情况下，可以不需要遵守。
