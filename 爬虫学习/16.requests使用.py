@@ -1,5 +1,6 @@
 '''
 安装：pip install requests
+使用requests代替urllib.request
 '''
 
 import requests
