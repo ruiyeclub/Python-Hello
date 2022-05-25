@@ -47,15 +47,11 @@ code_url = 'https://so.gushiwen.cn' + code
 session = requests.session()
 response_code = session.get(code_url)
 content_code = response_code.content
-with open('code.jpg', 'wb') as fp:
-    fp.write(content_code)
 
 # 使用ddddocr识别图片二维码
 ocr = ddddocr.DdddOcr()
-with open('code.jpg', 'rb') as f:
-    img_bytes = f.read()
-code_name = ocr.classification(img_bytes)
-print(code_name)
+# 参数是bytes二进制
+code_name = ocr.classification(content_code)
 
 data_post = {
     '__VIEWSTATE': view_state,
