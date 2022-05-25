@@ -18,3 +18,21 @@ scrapy是一个为了爬取网站数据，提取结构性数据而编写的应�
     eg: scrapy crawl baidu
     注意: 百度、搜狐、谷歌等，因为协议问题无法爬取，需要注释robots协议（settings.py）。
     robots协议是一个君子协议，一般情况下，可以不需要遵守。
+4.scrapy项目的结构
+    项目名字
+        项目名字
+            spiders文件夹（放爬虫文件）
+                init
+                自定义的爬虫文件 **核心功能文件**
+            init.py
+            items.py（定义数据结构的地方 entity）
+            middleware.py（中间件-代理）
+            pipelines.py（管道-用来处理下载的数据）
+            settings.py（配置文件-robots协议、ua定义等）
+5.response属性和方法
+    response.text   获取的是响应的字符串
+    response.body   获取的是二进制数据
+    response.xpath  可以直接使用xpath方法来解析response内容
+    response.extract()  提取seletor对象的data属性值
+    response.extract_first()    提取的seletor列表的第一个数据
+
