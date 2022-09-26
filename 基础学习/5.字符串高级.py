@@ -23,7 +23,7 @@ s3 = 'aaabb'
 print(s3.count('b'))
 
 s4 = 'cccdd'
-print(s4.replace('c','d'))
+print(s4.replace('c', 'd'))
 
 s5 = '1#2#3#4'
 print(s5.split('#'))
@@ -41,5 +41,3 @@ print(len(s8.strip()))
 
 s9 = 'a'
 print(s9.join('hello'))
-
-

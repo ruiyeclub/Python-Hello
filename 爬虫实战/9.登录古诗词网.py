@@ -15,9 +15,10 @@ denglu: 登录
 <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C93BE1AE" />
 '''
 
+import urllib.request
+
 import requests
 from bs4 import BeautifulSoup
-import urllib.request
 
 
 # 该方法有问题，相当于请求了两次验证码接口，导致需要验证的验证码不是输入的验证码
@@ -46,7 +47,7 @@ def get_content_by_session(code_url):
     # 请求验证码url的session和后面请求接口的session是一个session
     response_code = session.get(code_url)
     content_code = response_code.content
-    with open('code.jpg', 'wb')as fp:
+    with open('code.jpg', 'wb') as fp:
         fp.write(content_code)
     code_name = input('请输入你的验证码')
 

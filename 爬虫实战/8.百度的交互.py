@@ -1,9 +1,10 @@
 # 使用selenium操作百度自动操作
 
+import time
+
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-import time
 
 s = Service("../selenium/chromedriver.exe")
 browser = webdriver.Chrome(service=s)

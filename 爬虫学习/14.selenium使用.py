@@ -17,7 +17,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
-
 # 2.创建浏览器操作对象
 s = Service("../selenium/chromedriver.exe")
 

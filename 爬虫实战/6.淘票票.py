@@ -1,6 +1,7 @@
-import urllib.request
-import jsonpath
 import json
+import urllib.request
+
+import jsonpath
 
 # url = 'https://dianying.taobao.com/cityAction.json?city=430100&_ksTS=1652945177784_19&jsoncallback=jsonp20&action=cityAction&n_s=new&event_submit_doLocate=true'
 url = 'https://dianying.taobao.com/cityAction.json?activityId&_ksTS=1629789477003_137&jsoncallback=jsonp138&action=cityAction&n_s=new&event_submit_doGetAllRegion=true'

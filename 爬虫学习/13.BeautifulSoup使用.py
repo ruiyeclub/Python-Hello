@@ -7,7 +7,6 @@
 
 from bs4 import BeautifulSoup
 
-
 # 通过解析本地文件 来将bs4的基础语法进行讲解
 # 默认打开的文件的编码格式是gbk 所以在打开文件的时候需要指定编码
 soup = BeautifulSoup(open('13.BeautifulSoup使用.html', encoding='utf-8'), 'lxml')
@@ -96,5 +95,3 @@ obj = soup.select('#p1')[0]
 
 # <a href="" title="a2" id="f1" value="value京东">京东</a>
 print(soup.select('#f1')[0].get('value'))
-
-

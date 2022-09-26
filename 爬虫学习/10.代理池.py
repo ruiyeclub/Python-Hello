@@ -8,4 +8,3 @@ proxies_pool = [
 proxies = random.choice(proxies_pool)
 
 print(proxies)
-
