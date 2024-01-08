@@ -1,4 +1,5 @@
 import json
+
 import jsonpath
 
 obj = json.load(open('12.jsonpath解析.json', 'r', encoding='utf-8'))
@@ -40,7 +41,3 @@ obj = json.load(open('12.jsonpath解析.json', 'r', encoding='utf-8'))
 # 那本书超过了10块钱
 book_list = jsonpath.jsonpath(obj, '$..book[?(@.price>10)]')
 print(book_list)
-
-
-
-

@@ -16,9 +16,9 @@ a+:    打开一个文件用于读写。如果该文件已存在，文件指针�
 ab+:以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。
 '''
 
+import ddddocr
 import requests
 from bs4 import BeautifulSoup
-import ddddocr
 
 url = 'https://so.gushiwen.cn/user/login.aspx?from=http://so.gushiwen.cn/user/collect.aspx'
 

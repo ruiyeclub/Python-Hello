@@ -1,6 +1,12 @@
 beautifulsoup4==4.11.1
 jsonpath==0.82
-lxml==4.8.0
-requests==2.27.1
-ddddocr==1.4.3
-scrapy==2.6.1
+lxml==4.9.1
+requests==2.28.1
+ddddocr==1.4.7
+scrapy==2.6.2
+selenium==4.4.3
+bs4~=0.0.1
+pywifi~=1.1.12
+Flask==2.2.2
+itemadapter==0.7.0
+MarkupSafe~=2.1.1

@@ -3,8 +3,9 @@
 使用requests代替urllib.request
 '''
 
-import requests
 import json
+
+import requests
 
 
 # response的属性以及类型 类型 ：models.Response

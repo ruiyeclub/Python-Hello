@@ -31,4 +31,3 @@ tree = etree.HTML(content)
 result = tree.xpath('//input[@id="su"]/@value')
 
 print(result)
-

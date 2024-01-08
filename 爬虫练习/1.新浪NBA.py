@@ -5,8 +5,9 @@ xpath和bs4类似，处理html或xml，查找/替换等操作。
 jsonpath，把（json格式的）字符串转换为json对象
 '''
 
-from lxml import etree
 import urllib.request
+
+from lxml import etree
 
 # 练习内容：获取（https://nba.hupu.com/stats/players）中球星得分榜排名
 
