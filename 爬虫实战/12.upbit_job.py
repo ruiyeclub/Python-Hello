@@ -10,7 +10,7 @@ import re
 pattern = "[거래]"
 
 # 请求地址
-url = 'https://api-manager.upbit.com/api/v1/notices?page=2&per_page=20&thread_name=general'
+url = 'https://api-manager.upbit.com/api/v1/notices?page=1&per_page=5&thread_name=general'
 
 # 请求头
 headers = {
@@ -63,7 +63,6 @@ def do_send(post):
         # 返回false 不处理
         return
     # todo 处理发送消息逻辑
-    print("todo 处理发送消息逻辑")
 
 
 def do_check(string):
@@ -111,11 +110,14 @@ def do_sql(post):
 schedule.every(30).seconds.do(do_job)
 
 while True:
-    # 等待1秒钟
-    time.sleep(1)
+    try:
 
-    # 如果当前时间到达设置的定时任务时间点，则调用对应的函数
-    schedule.run_pending()
+        schedule.run_pending()  # 运行所有可以运行的任务
+        time.sleep(1)
+
+    except Exception as e:
+        time.sleep(5)
+        print(e)
 
 # if __name__ == '__main__':
 # is_symbol = do_check("[이벤트] 토트넘홋스퍼(SPURS) 거래지원 기념 이벤트 : SPURS 토큰 받고, 토트넘 경기 보러 영국 가자! (이벤트 당첨 안내)")
