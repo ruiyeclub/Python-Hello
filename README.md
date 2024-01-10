@@ -19,3 +19,5 @@ pip freeze > requirements.txt
 下载requirements.txt文件中的包：
 pip install -r requirements.txt
 
+查看依赖包
+pip list
