@@ -6,8 +6,10 @@ https://www.bilibili.com/video/BV1Db4y1m7Ho
 阿里云开源镜像站：https://mirrors.aliyun.com/pypi/simple/
 豆瓣：https://pypi.douban.com/simple/
 中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/
+默认镜像源: https://pypi.python.org/simple
 ```
 eg: pip install [包名] -i https://pypi.tuna.tsinghua.edu.cn/simple 
+eg: pip install [包名]==version -i https://pypi.tuna.tsinghua.edu.cn/simple 
 
 配置镜像源方法：
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
