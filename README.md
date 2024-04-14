@@ -14,6 +14,13 @@ eg: pip install [包名]==version -i https://pypi.tuna.tsinghua.edu.cn/simple
 配置镜像源方法：
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
+使用虚拟环境：创建、激活、安装：
+```
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
+```
+
 pip的freeze命令用于生成将当前项目的pip类库列表生成 requirements.txt 文件
 生成requirements.txt文件：
 pip freeze > requirements.txt
