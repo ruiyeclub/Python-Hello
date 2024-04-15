@@ -17,7 +17,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 使用虚拟环境：创建、激活、安装、关闭：
 ```
 python3 -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate （win使用.venv\Scripts\activate）
 python3 -m pip install -r requirements.txt
 deactivate
 ```
