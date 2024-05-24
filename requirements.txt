@@ -13,3 +13,4 @@ MarkupSafe~=2.1.1
 schedule~=1.2.1
 PyMySQL==1.1.0
 redis~=5.0.1
+googletrans==4.0.0-rc1
